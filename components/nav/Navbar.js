@@ -2,16 +2,14 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { AiOutlineHome, AiFillProject, AiOutlineFundProjectionScreen, AiOutlineMail } from "react-icons/ai";
 import { FcAbout } from "react-icons/fc";
-import { GrProjects, GrLanguage } from "react-icons/gr";
+import { GrProjects, GrLanguage, GrDocumentDownload } from "react-icons/gr";
 import { GoProject } from "react-icons/go";
 import { VscProject } from "react-icons/vsc";
 import { GiSkills } from "react-icons/gi";
 import { TbLanguageKatakana } from "react-icons/tb";
-import { HiOutlineMailOpen, HiOutlineTranslate } from "react-icons/hi";
+import { HiOutlineDocumentDownload, HiOutlineMailOpen, HiOutlineTranslate } from "react-icons/hi";
 import { IoLanguageOutline } from "react-icons/io";
 import NavbarLink from "./NavbarLink";
-
-import { Menu } from "@headlessui/react";
 
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
@@ -20,7 +18,7 @@ const Navbar = () => {
   const router = useRouter();
   let { locale } = router;
   const { t } = useTranslation();
-  const [dropdownOpen, setdropdownOpen] = useState(true);
+  const [dropdownOpen, setdropdownOpen] = useState(false);
   return (
     <div
       className={`${
@@ -36,16 +34,14 @@ const Navbar = () => {
           ? "bg-contactDark"
           : "bg-mainDark "
       } 
-    flex flex-col justify-between py-10  h-screen w-10 md:w-32 fixed text-slate-100 `}
+    flex flex-col justify-between py-5  h-screen w-10 md:w-32 fixed text-slate-100 `}
     >
-      {/* <h2>{t("common:title")}</h2> */}
-
       <div>
-        <div onClick={() => setdropdownOpen(!dropdownOpen)} class="overflow-hidden border-b-2 py-2 flex  hover:cursor-pointer hover:opacity-70">
+        <div onClick={() => setdropdownOpen(!dropdownOpen)} class="overflow-hidden border-b-[0.5px] pb-3 flex  hover:cursor-pointer hover:opacity-70">
           <div className="mx-2">
             <HiOutlineTranslate size={26} />
           </div>
-          <div>Language</div>
+          <div className=" md:visible invisible">Language</div>
         </div>
 
         <div
@@ -84,6 +80,15 @@ const Navbar = () => {
 
         <NavbarLink path="/#contact" name="CONTACT" color="contact" icon={<AiOutlineMail size={20} />} />
       </ul>
+
+      <div className="px-2 border-t-[0.5px] hover:opacity-50 pt-5 cursor-pointer">
+        <a href="#" className="w-full flex items-center gap-2">
+          <span className="text-white">
+            <HiOutlineDocumentDownload size={20} />
+          </span>
+          <span className=" md:visible invisible">CV</span>
+        </a>
+      </div>
     </div>
   );
 };

@@ -8,8 +8,8 @@ const NavbarLink = ({ path, icon, name, color }) => {
       <li
         className={
           router.asPath === path
-            ? `bg-${color} cursor-pointer py-10 border-b-2 border-b-${color} inline-flex hover:opacity-05 `
-            : `cursor-pointer py-10 border-b-2 border-b-${color} inline-flex hover:opacity-60`
+            ? `bg-${color} cursor-pointer py-10 border-b-[0.5px] border-b-${color} inline-flex hover:opacity-05 `
+            : `cursor-pointer py-10 border-b-[0.5px] border-b-${color} inline-flex hover:opacity-60`
         }
       >
         <span className="mx-2">{icon}</span>
