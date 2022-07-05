@@ -25,7 +25,7 @@ const Navbar = () => {
    bg-mainDark flex flex-col justify-between py-5  h-screen w-10 md:w-32 fixed text-slate-100 nav`}
     >
       <div>
-        <div onClick={() => setdropdownOpen(!dropdownOpen)} class="overflow-hidden border-b-[0.5px] pb-3 flex  hover:cursor-pointer hover:opacity-70">
+        <div onClick={() => setdropdownOpen(!dropdownOpen)} className="overflow-hidden border-b-[0.5px] pb-3 flex  hover:cursor-pointer hover:opacity-70">
           <div className="mx-2">
             <HiOutlineTranslate size={26} />
           </div>
@@ -33,7 +33,7 @@ const Navbar = () => {
         </div>
 
         <div
-          class={`${
+          className={`${
             dropdownOpen ? ` opacity-100 visible` : "top-[100%] invisible opacity-0"
           }  left-0 z-40 mt-2 w-full rounded border-[.5px] border-light  py-2 shadow-card transition-all`}
         >

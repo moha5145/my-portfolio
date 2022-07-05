@@ -29,9 +29,9 @@ const Card = ({ project }) => {
             <div className="flex gap-2 px-1 pt-2 justify-center bg-slate-500 ">
               {/* {console.log(project.technos)} */}
               {technos &&
-                technos.map((techno) => {
+                technos.map((techno, index) => {
                   // console.log(techno.link);
-                  return <img src={techno.link} alt="/" width={40} height={40} />;
+                  return <img src={techno.link} alt="/" width={40} height={40} key="index" />;
                 })}
             </div>
           </div>
