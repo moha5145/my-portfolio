@@ -11,9 +11,9 @@ const Main = () => {
     <section id="main" className=" bg-main w-full h-screen text-center">
       <div className="container mx-auto h-full flex flex-col justify-center items-center ">
         <div className="h-52 w-52 rounded-full border-double border-4">
-          <Image src={myImage} width="200%" height="200%" className=" rounded-full" objectFit="cover" />
+          <Image src={myImage} width="200%" height="200%" className=" rounded-full" objectFit="cover" alt="" />
         </div>
-        <h1 className="py-2">Hi I'am Mohamed</h1>
+        <h1 className="py-2">Hi I'&apos am Mohamed</h1>
         <h1 className="py-2 ">Full stack web/mobile developper </h1>
         <p className="py-4 max-w[70%] text-gray-400 mx-auto">
           Développeur web/mobile full stack, html, css, javascript,react, react Native, express.js, mongoDB

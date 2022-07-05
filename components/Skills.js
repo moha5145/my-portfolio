@@ -26,7 +26,7 @@ const Skils = () => {
 
           <div className="flex flex-col justify-center items-center">
             <div className="md:h-50 md:w-46 sm:h-40 sm:w-36 h-32 w-28   relative">
-              <Image src={CSS} layout="fill" className="object-contain" />
+              <Image src={CSS} alt="" layout="fill" className="object-contain" />
             </div>
 
             <h3>CSS</h3>
@@ -34,28 +34,28 @@ const Skils = () => {
 
           <div className="flex flex-col justify-center items-center">
             <div className="md:h-50 md:w-46 sm:h-40 sm:w-36 h-32 w-28 relative">
-              <Image src={Js} layout="fill" className="object-contain " />
+              <Image src={Js} alt="" layout="fill" className="object-contain " />
             </div>
             <h3>JavaScript</h3>
           </div>
 
           <div className="flex flex-col justify-center items-center">
             <div className="md:h-50 md:w-46 sm:h-40 sm:w-36 h-32 w-28   relative">
-              <Image src={ReactLogo} layout="fill" className="object-contain" />
+              <Image src={ReactLogo} alt="" layout="fill" className="object-contain" />
             </div>
             <h3>React</h3>
           </div>
 
           <div className="flex flex-col justify-center items-center">
             <div className="md:h-50 md:w-46 sm:h-40 sm:w-36 h-32 w-28   relative">
-              <Image src={expressLogo} layout="fill" className="object-contain" />
+              <Image src={expressLogo} alt="" layout="fill" className="object-contain" />
             </div>
             <h3>Express.js</h3>
           </div>
 
           <div className="flex flex-col justify-center items-center">
             <div className="md:h-50 md:w-46 sm:h-40 sm:w-36 h-32 w-28   relative">
-              <Image src={nodeLogo} layout="fill" className="object-contain" />
+              <Image src={nodeLogo} alt="" layout="fill" className="object-contain" />
             </div>
 
             <h3>Node.js</h3>
@@ -63,14 +63,14 @@ const Skils = () => {
 
           <div className="flex flex-col justify-center items-center">
             <div className="md:h-50 md:w-46 sm:h-40 sm:w-36 h-32 w-28   relative">
-              <Image src={mongoLogo} layout="fill" className="object-contain" />
+              <Image src={mongoLogo} alt="" layout="fill" className="object-contain" />
             </div>
             <h3>MongoDB</h3>
           </div>
 
           <div className="flex flex-col justify-center items-center">
             <div className="md:h-50 md:w-46 sm:h-40 sm:w-36 h-32 w-28  relative">
-              <Image src={githubLogo} layout="fill" className="object-contain" />
+              <Image src={githubLogo} alt="" layout="fill" className="object-contain" />
             </div>
 
             <h3>Github</h3>
