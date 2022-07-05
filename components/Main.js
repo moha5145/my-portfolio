@@ -8,7 +8,7 @@ import myImage from "../public/my-img.jpg";
 
 const Main = () => {
   return (
-    <div id="main" className=" bg-main w-full h-screen text-center">
+    <section id="main" className=" bg-main w-full h-screen text-center">
       <div className="container mx-auto h-full flex flex-col justify-center items-center ">
         <div className="h-52 w-52 rounded-full border-double border-4">
           <Image src={myImage} width="200%" height="200%" className=" rounded-full" objectFit="cover" />
@@ -33,7 +33,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Main;

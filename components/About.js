@@ -3,7 +3,7 @@ import img from "../public/assets/skills/html-css-js.png";
 
 const About = () => {
   return (
-    <div id="about" className=" bg-about  h-[100%] md:h-screen py-20 ">
+    <section id="about" className=" bg-about  h-[100%] md:h-screen py-20 ">
       <div className="flex flex-col-reverse md:flex-row container px-3 mx-auto gap-20">
         <div className="flex-3 items-start flex flex-col gap-10">
           <h2>About</h2>
@@ -28,7 +28,7 @@ const About = () => {
           <Image src={img} alt="" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default About;

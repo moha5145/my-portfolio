@@ -21,20 +21,8 @@ const Navbar = () => {
   const [dropdownOpen, setdropdownOpen] = useState(false);
   return (
     <div
-      className={`${
-        router.asPath == "/"
-          ? " bg-mainDark"
-          : router.asPath == "/#projects"
-          ? "bg-projectsDark"
-          : router.asPath == "/#skills"
-          ? "bg-skillsDark"
-          : router.asPath == "/#about"
-          ? "bg-aboutDark"
-          : router.asPath == "/#contact"
-          ? "bg-contactDark"
-          : "bg-mainDark "
-      } 
-    flex flex-col justify-between py-5  h-screen w-10 md:w-32 fixed text-slate-100 `}
+      className={`
+   bg-mainDark flex flex-col justify-between py-5  h-screen w-10 md:w-32 fixed text-slate-100 nav`}
     >
       <div>
         <div onClick={() => setdropdownOpen(!dropdownOpen)} class="overflow-hidden border-b-[0.5px] pb-3 flex  hover:cursor-pointer hover:opacity-70">

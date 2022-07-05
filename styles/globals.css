@@ -8,7 +8,8 @@ html {
 
 @layer base {
   body {
-    /* @apply bg-orange-300 text-white; */
+    @apply scroll-smooth
+    /* @apply bg-orange-300 text-white; */;
   }
 
   h1,

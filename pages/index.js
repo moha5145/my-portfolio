@@ -6,14 +6,12 @@ import Projects from "../components/projects/Projects";
 import Skills from "../components/Skills";
 import Contact from "../components/contact/Contact";
 import { useTranslation } from "next-i18next";
+import { useInView } from "react-intersection-observer";
+import { useRouter } from "next/router";
 
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
-// export function getStaticProps({ locale }) {
-//   return {
-//     props: { locale },
-//   };
-// }
+import { useEffect, useRef } from "react";
+import Link from "next/link";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -22,9 +20,61 @@ export async function getStaticProps({ locale }) {
     },
   };
 }
+
 export default function Home({ locale }) {
   const { t } = useTranslation();
-  console.log(locale);
+
+  const router = useRouter();
+  console.log(router);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const links = document.querySelectorAll(".link");
+    const nav = document.querySelector(".nav");
+
+    window.onscroll = () => {
+      if (sections[0].getBoundingClientRect().top <= 0 && sections[0].getBoundingClientRect().bottom > 0) {
+        links[0].classList.add("bg-main");
+        nav.classList.add("bg-mainDark");
+      } else {
+        links[0].classList.remove("bg-main");
+        nav.classList.remove("bg-mainDark");
+      }
+
+      if (sections[1].getBoundingClientRect().top <= 0 && sections[1].getBoundingClientRect().bottom > 1) {
+        links[1].classList.add("bg-projects");
+        nav.classList.add("bg-projectsDark");
+      } else {
+        links[1].classList.remove("bg-projects");
+        nav.classList.remove("bg-projectsDark");
+      }
+
+      if (sections[2].getBoundingClientRect().top <= 1 && sections[2].getBoundingClientRect().bottom > 1) {
+        links[2].classList.add("bg-skills");
+        nav.classList.add("bg-skillsDark");
+      } else {
+        links[2].classList.remove("bg-skills");
+        nav.classList.remove("bg-skillsDark");
+      }
+
+      if (sections[3].getBoundingClientRect().top <= 1 && sections[3].getBoundingClientRect().bottom > 1) {
+        links[3].classList.add("bg-about");
+        nav.classList.add("bg-aboutDark");
+      } else {
+        links[3].classList.remove("bg-about");
+        nav.classList.remove("bg-aboutDark");
+      }
+
+      if (sections[4].getBoundingClientRect().top <= 0.515625 && sections[4].getBoundingClientRect().bottom > 0) {
+        links[4].classList.add("bg-contact");
+        nav.classList.add("bg-contactDark");
+      } else {
+        links[4].classList.remove("bg-contact");
+        nav.classList.remove("bg-contactDark");
+      }
+    };
+  });
+
   return (
     <div>
       <Head>
@@ -33,13 +83,23 @@ export default function Home({ locale }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="ml-10 md:ml-32 text-slate-200">
-        <h1>{t("common:title")}</h1>
-        <h1>{locale}</h1>
+      <div className="ml-10 md:ml-32 text-slate-200 scroll-smooth">
+        {/* <h1>{t("common:title")}</h1>
+        <h1>{locale}</h1> */}
+
+        {/* {mainInview && window.history.replaceState(null, null, "#main")} */}
         <Main />
+
+        {/* {projectInview && window.history.replaceState(null, null, "#projects")} */}
         <Projects />
+
+        {/* {skillsInView && window.history.replaceState(null, null, "#skills")} */}
         <Skills />
+
+        {/* {aboutInview && window.history.replaceState(null, null, "#about")} */}
         <About />
+
+        {/* {contactInView && pushContact} */}
         <Contact />
       </div>
     </div>

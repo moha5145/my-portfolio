@@ -95,8 +95,8 @@ const Projects = () => {
     },
   ];
   return (
-    <div id="projects" className="  h-[100%] bg-projects p-2">
-      <div className=" mx-auto mr-0">
+    <section id="projects" className="  h-[100%] bg-projects">
+      <div className=" mx-auto mr-0  pb-2">
         <h1 className="text-center pt-10">Projects</h1>
 
         <div className="pl-3">
@@ -116,7 +116,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Projects;

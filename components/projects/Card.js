@@ -10,7 +10,7 @@ import NodeLogo from "../../public/assets/skills/node.png";
 const Card = ({ project }) => {
   // console.log(project.img);
   const technos = project.technos;
-  console.log(technos);
+  // console.log(technos);
   return (
     <Link href={project.github}>
       <div className=" relative group">
@@ -27,10 +27,10 @@ const Card = ({ project }) => {
               <img src={project.img} alt="" className=" rounded-t-md" />
             </div>
             <div className="flex gap-2 px-1 pt-2 justify-center bg-slate-500 ">
-              {console.log(project.technos)}
+              {/* {console.log(project.technos)} */}
               {technos &&
                 technos.map((techno) => {
-                  console.log(techno.link);
+                  // console.log(techno.link);
                   return <img src={techno.link} alt="/" width={40} height={40} />;
                 })}
             </div>
