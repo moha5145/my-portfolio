@@ -2,7 +2,7 @@ const navStyle = () => {
   const sections = document.querySelectorAll("section");
   const links = document.querySelectorAll(".link");
   const nav = document.querySelector(".nav");
-
+  console.log(nav);
   window.onscroll = () => {
     if (sections[0].getBoundingClientRect().top <= 0 && sections[0].getBoundingClientRect().bottom > 0) {
       links[0].classList.add("bg-main");

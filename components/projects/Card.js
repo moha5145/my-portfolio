@@ -8,66 +8,61 @@ import SassLogo from "../../public/assets/skills/sass.png";
 import NodeLogo from "../../public/assets/skills/node.png";
 
 const Card = ({ project }) => {
-  // console.log(project.img);
   const technos = project.technos;
-  // console.log(technos);
+
   return (
-    <Link href={project.github}>
-      <div className=" relative group">
-        <div
-          className="flex flex-col justify-between 
-                w-72 h-max md:w-[500px]  md:h-auto
+    <div className=" relative group">
+      <div
+        className="flex flex-col justify-between  gap-10
+                w-[98%] h-max 
                 md:p10 bg-project2 rounded-lg 
-                drop-shadow-md shrink-0 
-              
-                 hover:h-auto  "
-        >
-          <div>
-            <div className="w-58 h-58">
-              <img src={project.img} alt="" className=" rounded-t-md" />
-            </div>
-            <div className="flex gap-2 px-1 pt-2 justify-center bg-slate-500 ">
-              {/* {console.log(project.technos)} */}
-              {technos &&
-                technos.map((techno, index) => {
-                  // console.log(techno.link);
-                  return <img src={techno.link} alt="/" width={40} height={40} key="index" />;
-                })}
-            </div>
+                drop-shadow-md hover:h-auto  "
+      >
+        <div>
+          <div className="w-62 h-66">
+            <img src={project.img} alt="" className=" rounded-t-md" />
           </div>
-          <h3 className=" p-3">{project.title}</h3>
-
-          <div className="px-2">
-            <p>{project.description} </p>
-            <div className="flex justify-between items-stretch p-3  lg:invisible ">
-              <Link href={project.github}>
-                <button className=" border-2 p-1 rounded-md opacity-100 py-2 px-5 bg-white text-black hover:text-white hover:bg-projectsDark">Github</button>
-              </Link>
-
-              <Link href={project.link}>
-                <button className=" border-2 p-1 rounded-md opacity-100 py-2 px-5 text-white hover:bg-white hover:text-black">Live Demo</button>
-              </Link>
-            </div>
+          <div className="flex gap-2 px-1 py-2 justify-around bg-slate-500 ">
+            {technos &&
+              technos.map((techno, index) => {
+                return <img src={techno.link} alt="/" width={25} height={25} key={index} />;
+              })}
           </div>
         </div>
+      </div>
 
-        <div className=" group-hover:md:visible invisible cursor-pointer absolute top-0 left-0 w-full h-full rounded-md flex justify-around items-center bg-slate-500 opacity-80">
-          {/* <div className="flex justify-between items-center p-3 opacity-100 "> */}
+      <div
+        className=" group-hover:visible invisible  absolute top-0 
+                    left-0 h-full w-[98%] rounded-md px-2 pb-2 flex flex-col justify-around
+                  bg-slate-500 opacity-95"
+      >
+        <h3 className=" p-3">{project.title}</h3>
+        <p>{project.description} </p>
+        <div className="flex justify-between ">
           <Link href={project.github}>
-            <button className="hover:opacity-80 border-2 p-1 rounded-md opacity-100 font-bold text-2xl py-2 px-5 bg-white text-black hover:text-white hover:bg-slate-500">
+            <a
+              target="_blank"
+              className="hover:opacity-80 border-2  rounded-md opacity-100 
+                        font-bold md:text-xl p-2 md:px-10 bg-white text-black 
+                      hover:text-white hover:bg-slate-500"
+            >
               Github
-            </button>
+            </a>
           </Link>
 
           <Link href={project.link}>
-            <button className="hover:opacity-80 border-2 p-1 rounded-md opacity-100 font-bold text-2xl py-2 px-5 text-white hover:bg-white hover:text-black">
+            <a
+              target="_blank"
+              className="hover:opacity-80 border-2 rounded-md 
+                        opacity-100 font-bold md:text-xl p-2 md:px-10 
+                      text-white hover:bg-white hover:text-black"
+            >
               Live Demo
-            </button>
+            </a>
           </Link>
-          {/* </div> */}
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 export default Card;

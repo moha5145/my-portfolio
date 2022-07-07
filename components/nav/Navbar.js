@@ -10,26 +10,31 @@ import { TbLanguageKatakana } from "react-icons/tb";
 import { HiOutlineDocumentDownload, HiOutlineMailOpen, HiOutlineTranslate } from "react-icons/hi";
 import { IoLanguageOutline } from "react-icons/io";
 import NavbarLink from "./NavbarLink";
+import { useTranslation } from "next-i18next";
+import { saveAS } from "file-saver";
+// import cv from "../../public/assets/cv.pdf";
 
-import { useTranslation } from "react-i18next";
+// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useState } from "react";
 
 const Navbar = () => {
   const router = useRouter();
   let { locale } = router;
   const { t } = useTranslation();
+  // console.log(t);
   const [dropdownOpen, setdropdownOpen] = useState(false);
+
+  // const downloadCv = () => {
+  //   saveAs(cv, "cv.pdf");
+  // };
   return (
-    <div
-      className={`
-   bg-mainDark flex flex-col justify-between py-5  h-screen w-10 md:w-32 fixed text-slate-100 nav`}
-    >
-      <div>
+    <div className=" nav bg-mainDark flex flex-col justify-between py-5  h-screen w-10 md:w-32 fixed text-slate-100">
+      <div className="">
         <div onClick={() => setdropdownOpen(!dropdownOpen)} className="overflow-hidden border-b-[0.5px] pb-3 flex  hover:cursor-pointer hover:opacity-70">
           <div className="mx-2">
             <HiOutlineTranslate size={26} />
           </div>
-          <div className=" md:visible invisible">Language</div>
+          <div className=" md:visible invisible">{t("common:language")}</div>
         </div>
 
         <div
@@ -56,21 +61,21 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-
+      {/* <p>{t("common:hello")}</p> */}
       <ul className="flex flex-col">
-        <NavbarLink path="/" name="HOME" color="main" icon={<AiOutlineHome size={20} />} />
+        <NavbarLink path="/" name={t("common:home")} color="main" icon={<AiOutlineHome size={20} />} />
 
-        <NavbarLink path="/#projects" name="PROJECTS" color="projects" icon={<VscProject size={20} />} />
+        <NavbarLink path="/#projects" name={t("common:projects")} color="projects" icon={<VscProject size={20} />} />
 
-        <NavbarLink path="/#skills" name="SKILLS" color="skills" icon={<GiSkills size={20} color="white" />} />
+        <NavbarLink path="/#skills" name={t("common:skills")} color="skills" icon={<GiSkills size={20} color="white" />} />
 
-        <NavbarLink path="/#about" name="ABOUT" color="about" icon={<FcAbout size={20} />} />
+        <NavbarLink path="/#about" name={t("common:about")} color="about" icon={<FcAbout size={20} />} />
 
-        <NavbarLink path="/#contact" name="CONTACT" color="contact" icon={<AiOutlineMail size={20} />} />
+        <NavbarLink path="/#contact" name={t("common:contact")} color="contact" icon={<AiOutlineMail size={20} />} />
       </ul>
 
       <div className="px-2 border-t-[0.5px] hover:opacity-50 pt-5 cursor-pointer">
-        <a href="#" className="w-full flex items-center gap-2">
+        <a href="/files/cv.pdf" download target="_blank" rel="noopener noreferrer" className="w-full flex items-center gap-2">
           <span className="text-white">
             <HiOutlineDocumentDownload size={20} />
           </span>

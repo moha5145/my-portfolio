@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { HiOutlineDocumentDownload } from "react-icons/hi";
 import img from "../public/assets/skills/html-css-js.png";
 
 const About = () => {
@@ -27,6 +28,15 @@ const About = () => {
         <div className="flex-2">
           <Image src={img} alt="" />
         </div>
+      </div>
+
+      <div className=" hover:opacity-70  cursor-pointer flex justify-center py-10 md:py-32">
+        <a href="/files/cv.pdf" download target="_blank" rel="noopener noreferrer" className=" flex items-center gap-2">
+          <span className="text-white">
+            <HiOutlineDocumentDownload size={70} />
+          </span>
+          <span className=" text-4xl">CV</span>
+        </a>
       </div>
     </section>
   );
