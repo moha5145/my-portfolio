@@ -1,29 +1,20 @@
+import { t } from "i18next";
 import Image from "next/image";
 import { HiOutlineDocumentDownload } from "react-icons/hi";
 import img from "../public/assets/skills/html-css-js.png";
+import { useTranslation } from "next-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   return (
-    <section id="about" className=" bg-about  h-[100%] md:h-screen py-20 ">
-      <div className="flex flex-col-reverse md:flex-row container px-3 mx-auto gap-20">
-        <div className="flex-3 items-start flex flex-col gap-10">
-          <h2>About</h2>
+    <section id="about" className=" bg-about  h-[100%] md:h-screen md:py-20 flex flex-col items-center justify-between">
+      <h1 className="py-5 md:py-20">{t("common:about_t")}</h1>
+      <div className="flex flex-col-reverse md:flex-row container px-3 mx-auto gap-20 md:w-3/4 ">
+        <div className="flex-3 items-start flex flex-col gap-10 text-lg md:text-xl">
+          <p>{t("common:about_p1")}</p>
+          <p>{t("common:about_p2")}</p>
 
-          <h1>Who i am</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ipsam esse, magni optio atque repellendus quasi incidunt perferendis quam reiciendis,
-            omnis quod! Quam dignissimos incidunt culpa, voluptatum voluptate voluptas est? Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-            assumenda voluptate, ea eligendi culpa soluta tempore ratione expedita cum laborum voluptatum,
-          </p>
-          <p>
-            iure repellat enim quisquam totam placeat eaque ipsum incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem perferendis,
-            numquam, rerum obcaecati odio sapiente voluptates odit ad ducimus illum nostrum magnam expedita molestiae tempore maiores nihil omnis, facilis iure.
-          </p>
-
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, minus ipsam mollitia consequuntur error modi ipsum quos iusto enim sunt
-            distinctio sapiente excepturi, dolor voluptatem nemo molestias quam placeat maiores.
-          </p>
+          <p>{t("common:about_p3")}</p>
         </div>
         <div className="flex-2">
           <Image src={img} alt="" />

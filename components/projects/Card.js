@@ -19,7 +19,7 @@ const Card = ({ project }) => {
                 drop-shadow-md hover:h-auto  "
       >
         <div>
-          <div className="w-62 h-66">
+          <div className="w-66 h-66">
             <img src={project.img} alt="" className=" rounded-t-md" />
           </div>
           <div className="flex gap-2 px-1 py-2 justify-around bg-slate-500 ">
@@ -33,10 +33,10 @@ const Card = ({ project }) => {
 
       <div
         className=" group-hover:visible invisible  absolute top-0 
-                    left-0 h-full w-[98%] rounded-md px-2 pb-2 flex flex-col justify-around
+                    left-0 h-full w-[98%] rounded-md px-2 pb-2 md:px-10 flex flex-col justify-around
                   bg-slate-500 opacity-95"
       >
-        <h3 className=" p-3">{project.title}</h3>
+        <h3 className=" ">{project.title}</h3>
         <p>{project.description} </p>
         <div className="flex justify-between ">
           <Link href={project.github}>

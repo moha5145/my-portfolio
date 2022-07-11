@@ -4,7 +4,7 @@ import { FiLinkedin } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <div className="bg-contactDark  py-10">
+    <section id="footer" className="bg-contactDark  py-10">
       <div className="flex gap-10  justify-center mt-auto ">
         <div className="cursor-pointer hover:opacity-70">
           <Link href="https://www.linkedin.com/in/mohamed-mustafa-96ab84239/">
@@ -21,7 +21,7 @@ const Footer = () => {
       <p className="text-sm mt-auto py-4 text-center">
         Copyright All Right Reserved 2022 <span className="text-red-400">Mohamed MUSTAFA</span>{" "}
       </p>
-    </div>
+    </section>
   );
 };
 export default Footer;

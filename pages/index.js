@@ -73,7 +73,7 @@ export default function Home({ locale }) {
         removeNavClass("bg-aboutDark");
       }
 
-      if (sections[4].getBoundingClientRect().top <= 2 && sections[4].getBoundingClientRect().bottom > 0) {
+      if (sections[4].getBoundingClientRect().top <= 2) {
         links[4].classList.add("bg-contact");
         addNavClass("bg-contactDark");
       } else {
