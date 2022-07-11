@@ -58,7 +58,7 @@ const Contact = () => {
       {/* <p>{t("common:home")}</p> */}
 
       <div className="container flex flex-col  gap-3 md:2/3 lg:w-1/2 mx-auto">
-        <p>N'hésitez pas à me contacter, je suis à votre disposition pour plus d'informations.</p>
+        <p>N &apos hésitez pas à me contacter, je suis à votre disposition pour plus d &apos informations.</p>
         <p>m.mohammed@outlook.fr</p>
         <p>0658372366</p>
       </div>
