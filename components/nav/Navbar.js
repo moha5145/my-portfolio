@@ -27,8 +27,14 @@ const Navbar = () => {
   // const downloadCv = () => {
   //   saveAs(cv, "cv.pdf");
   // };
+
+  const setCookie = (lang) => {
+    document.cookie = `NEXT_LOCALE=${lang}`;
+    window.location.relaod();
+  };
+
   return (
-    <div className=" nav bg-mainDark flex flex-col justify-between py-5  h-screen w-10 md:w-32 fixed text-slate-100">
+    <div className=" nav bg-mainDark flex flex-col justify-between py-5  h-screen w-10 md:w-auto fixed text-slate-100">
       <div className="">
         <div onClick={() => setdropdownOpen(!dropdownOpen)} className="overflow-hidden border-b-[0.5px] pb-3 flex  hover:cursor-pointer hover:opacity-70">
           <div className="mx-2">
@@ -45,7 +51,10 @@ const Navbar = () => {
           <Link href={router.asPath} locale="fr">
             <a
               className="block py-2 px-2 text-base font-semibold text-body-color hover:bg-primary hover:bg-opacity-5 hover:text-primary hover:opacity-70"
-              onClick={() => setdropdownOpen(false)}
+              onClick={() => {
+                setdropdownOpen(false);
+                setCookie("fr");
+              }}
             >
               Fra
             </a>
@@ -54,7 +63,10 @@ const Navbar = () => {
           <Link href={router.asPath} locale="en">
             <a
               className="block py-2 px-2 text-base font-semibold text-body-color hover:bg-primary hover:bg-opacity-5 hover:text-primary hover:opacity-70"
-              onClick={() => setdropdownOpen(false)}
+              onClick={() => {
+                setdropdownOpen(false);
+                setCookie("en");
+              }}
             >
               Eng
             </a>

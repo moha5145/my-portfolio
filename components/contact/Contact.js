@@ -54,11 +54,11 @@ const Contact = () => {
 
   return (
     <section id="contact" className="bg-contact h-screen w-full text-center p-2 flex flex-col  justify-center ">
-      <h2>Contact me</h2>
+      <h2>{t("common:contact_title")}</h2>
       {/* <p>{t("common:home")}</p> */}
 
       <div className="container flex flex-col  gap-3 md:2/3 lg:w-1/2 mx-auto">
-        <p>N &apos hésitez pas à me contacter, je suis à votre disposition pour plus d &apos informations.</p>
+        <p>{t("common:contact_p1")}</p>
         <p>m.mohammed@outlook.fr</p>
         <p>0658372366</p>
       </div>
@@ -69,8 +69,8 @@ const Contact = () => {
           </div> */}
           <input
             type="text"
-            placeholder="Your name"
-            className="p-2 md-p4 flex-1 rounded-md placeholder:text-contact outline-red-400"
+            placeholder={t("common:contact_name")}
+            className="p-2 md-p4 flex-1 rounded-md outline-red-400"
             onChange={(event) => {
               setName(event.target.value);
               console.log(name);
@@ -85,7 +85,7 @@ const Contact = () => {
 
           <input
             type="email"
-            placeholder="Your Email"
+            placeholder={t("common:contact_email")}
             className="p-2 md-p4 flex-1 rounded-md outline-red-400"
             onChange={(event) => {
               setEmail(event.target.value);
@@ -103,7 +103,7 @@ const Contact = () => {
             id=""
             cols="30"
             rows="7"
-            placeholder="Your Message"
+            placeholder={t("common:contact_message")}
             className="p-2 md-p4 flex-1 rounded-md outline-red-400"
             onChange={(event) => {
               setMessage(event.target.value);
@@ -119,7 +119,7 @@ const Contact = () => {
           </div> */}
           <input
             type="submit"
-            value="Send message"
+            value={t("common:contact_btn")}
             className="p-2 md-p4 flex-1 rounded-md bg-red-400 text-green-100 hover:opacity-70 active:opacity-50 font-bold  text-lg cursor-pointer"
           />
         </div>

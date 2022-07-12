@@ -6,8 +6,8 @@ import { useTranslation } from "next-i18next";
 const Projects = () => {
   const { t } = useTranslation();
   return (
-    <section id="projects" className="  h-[100%] bg-projects">
-      <div className=" mx-auto mr-0  pb-2">
+    <section id="projects" className="  h-[100%] ">
+      <div className=" mx-auto mr-0  pb-2 md:pl-8 bg-projects w-full">
         <h1 className="text-center pt-10">{t("common:projects_t1")}</h1>
 
         <div className="pl-3">

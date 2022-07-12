@@ -91,7 +91,7 @@ export default function Home({ locale }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="ml-10 md:ml-32 text-slate-200 scroll-smooth">
+      <div className="pl-10 md:pl-28 text-slate-200 scroll-smooth">
         {/* <h1>{t("common:title")}</h1>
         <h1>{locale}</h1> */}
 
