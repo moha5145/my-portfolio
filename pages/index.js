@@ -29,11 +29,17 @@ export default function Home({ locale }) {
   console.log(router);
   const addNavClass = (color) => {
     const body = document.querySelector(".body");
+    const nav = document.querySelector(".nav");
+
     body.classList.add(color);
+    nav.classList.add(color);
   };
   const removeNavClass = (color) => {
     const body = document.querySelector(".body");
+    const nav = document.querySelector(".nav");
+
     body.classList.remove(color);
+    nav.classList.remove(color);
   };
   useEffect(() => {
     const sections = document.querySelectorAll("section");

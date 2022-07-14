@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const NavbarLink = ({ path, icon, name, color }) => {
+const NavbarLink = ({ path, icon, name, color, border }) => {
   const router = useRouter();
 
   return (
     <Link href={path} className="">
-      <li className={`${path === "/" && "bg-main"} cursor-pointer py-10 border-b-[0.5px]  inline-flex hover:opacity-60 link`}>
+      <li
+        className={`${path === "/" && "bg-main"} 
+                      ${border && "border-b-[0.5px]"} cursor-pointer py-8 md:py-10 inline-flex hover:opacity-60 link`}
+      >
         <span className="mx-2">{icon}</span>
         <span className=" md:visible invisible">{name}</span>
       </li>
