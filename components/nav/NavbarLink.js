@@ -1,9 +1,6 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 
-const NavbarLink = ({ path, icon, name, color, border }) => {
-  const router = useRouter();
-
+const NavbarLink = ({ path, icon, name, border }) => {
   return (
     <Link href={path} className="">
       <li

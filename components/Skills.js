@@ -1,15 +1,14 @@
 import Image from "next/image";
+
 import Html from "../public/assets/skills/html.png";
 import CSS from "../public/assets/skills/css.png";
 import Js from "../public/assets/skills/javascript.png";
-
 import ReactLogo from "../public/assets/skills/react.png";
-
 import nodeLogo from "../public/assets/skills/node.png";
-
 import expressLogo from "../public/assets/skills/express.png";
 import githubLogo from "../public/assets/skills/github.png";
 import mongoLogo from "../public/assets/skills/mongo.png";
+
 import { useTranslation } from "next-i18next";
 
 const Skils = () => {

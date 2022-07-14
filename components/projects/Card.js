@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Card = ({ project, isVideo, isPlayerIsVisible, setisPlayerIsVisible }) => {
+const Card = ({ project, isVideo, setisPlayerIsVisible }) => {
   const technos = project.technos;
 
   return (

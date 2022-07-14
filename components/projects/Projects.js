@@ -11,7 +11,6 @@ const Projects = () => {
   const { t } = useTranslation();
   const fripsVideo = "https://vimeo.com/729923268";
   const [isPlayerIsVisible, setisPlayerIsVisible] = useState(false);
-  // const [isVideo, setisVideo] = useState(false);
 
   return (
     <section id="projects" className="  h-[100%] ">

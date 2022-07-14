@@ -1,11 +1,6 @@
 import axios from "axios";
-import { useTranslation } from "next-i18next";
-import Link from "next/link";
 import { useState } from "react";
-import { AiOutlineMail, AiOutlineSend, AiOutlineUser } from "react-icons/ai";
-import { FaGithub } from "react-icons/fa";
-import { FiLinkedin, FiSend } from "react-icons/fi";
-import { HiOutlinePencil } from "react-icons/hi";
+import { useTranslation } from "next-i18next";
 import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {

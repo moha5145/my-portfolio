@@ -22,7 +22,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <p className="text-sm mt-auto py-4 text-center">
+      <p className="text-sm mt-auto py-4 px-1 text-center">
         Copyright All Right Reserved 2022 <span className="text-red-400">Mohamed MUSTAFA</span>
       </p>
     </section>

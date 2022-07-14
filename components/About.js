@@ -1,4 +1,3 @@
-import { t } from "i18next";
 import Image from "next/image";
 import { HiOutlineDocumentDownload } from "react-icons/hi";
 import img from "../public/assets/skills/html-css-js.png";

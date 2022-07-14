@@ -14,7 +14,7 @@ module.exports = {
         main: "#3C6382",
         mainDark: "#044378",
         projects: "#8AA2B5",
-        projectsDark: "#285F8A",
+        projectsDark: "#2f7bb5",
         project2: "#3C6382",
         skills: "#C7C7C7 ",
         skillsDark: "#969393",
