@@ -28,12 +28,12 @@ export default function Home({ locale }) {
 
   console.log(router);
   const addNavClass = (color) => {
-    const nav = document.querySelector(".nav");
-    nav.classList.add(color);
+    const body = document.querySelector(".body");
+    body.classList.add(color);
   };
   const removeNavClass = (color) => {
-    const nav = document.querySelector(".nav");
-    nav.classList.remove(color);
+    const body = document.querySelector(".body");
+    body.classList.remove(color);
   };
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -91,7 +91,7 @@ export default function Home({ locale }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="pl-10 md:pl-28 text-slate-200 scroll-smooth">
+      <div className="pl-10 md:pl-28 text-slate-200 scroll-smoot body bg-mainDark">
         <Main />
 
         <Projects />

@@ -48,7 +48,7 @@ const Carousels = ({ projects, isVideo, isPlayerIsVisible, setisPlayerIsVisible 
                 min: 0,
               },
               items: 1,
-              partialVisibilityGutter: 20,
+              partialVisibilityGutter: 10,
             },
           }}
           rewind={false}

@@ -13,7 +13,7 @@ const Card = ({ project, isVideo, isPlayerIsVisible, setisPlayerIsVisible }) => 
       >
         <div className="relative">
           <div className="w-full h-60 sm:h-96 md:96 lg:h-[450px]">
-            <img src={project.img} alt="" className=" rounded-t-md w-full h-[100%] object-cover object-left-top " />
+            <img src={project.img} alt="" className=" rounded-t-md w-full h-[100%] object-cover object-top " />
           </div>
           <div className="flex w-full justify-around px-1 z-10 bg-slate-500 absolute bottom-0 ">
             {technos &&

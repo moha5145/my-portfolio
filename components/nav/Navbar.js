@@ -29,7 +29,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" nav bg-mainDark flex flex-col justify-between py-5  h-screen w-10 md:w-auto fixed text-slate-100">
+    <div className=" nav flex flex-col justify-between py-5  h-screen w-10 md:w-auto fixed text-slate-100">
       <div className="">
         <div onClick={() => setdropdownOpen(!dropdownOpen)} className="overflow-hidden border-b-[0.5px] pb-3 flex  hover:cursor-pointer hover:opacity-70">
           <div className="mx-2">
