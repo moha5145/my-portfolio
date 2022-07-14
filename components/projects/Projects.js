@@ -35,7 +35,7 @@ const Projects = () => {
               <Carousel projects={groupsProjects} isVideo={true} isPlayerIsVisible={isPlayerIsVisible} setisPlayerIsVisible={setisPlayerIsVisible} />
             </div>
           ) : (
-            <div className="flex flex-col justify-start w-full md:h-[750px] mb-16">
+            <div className="flex flex-col justify-start w-full h-72 sm:h-96 md:h-[750px] mb-16 mt-5">
               <ReactPlayer
                 url={fripsVideo}
                 playing
