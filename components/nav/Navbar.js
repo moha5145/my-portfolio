@@ -21,12 +21,7 @@ const Navbar = () => {
   const router = useRouter();
   let { locale } = router;
   const { t } = useTranslation();
-  // console.log(t);
   const [dropdownOpen, setdropdownOpen] = useState(false);
-
-  // const downloadCv = () => {
-  //   saveAs(cv, "cv.pdf");
-  // };
 
   const setCookie = (lang) => {
     document.cookie = `NEXT_LOCALE=${lang}`;
@@ -73,7 +68,7 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-      {/* <p>{t("common:hello")}</p> */}
+
       <ul className="flex flex-col">
         <NavbarLink path="/" name={t("common:home")} color="main" icon={<AiOutlineHome size={20} />} />
 

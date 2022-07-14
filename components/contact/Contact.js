@@ -43,7 +43,6 @@ const Contact = () => {
           if (response) {
             console.log(response);
             toast.success("Le message est bien été envoyé!");
-            // setNotifications("le message est bien été envoyé");
           }
         }
       }
@@ -54,19 +53,15 @@ const Contact = () => {
 
   return (
     <section id="contact" className="bg-contact h-screen w-full text-center p-2 flex flex-col  justify-center ">
-      <h2>{t("common:contact_title")}</h2>
-      {/* <p>{t("common:home")}</p> */}
+      <h2 className="mb-5">{t("common:contact_title")}</h2>
 
       <div className="container flex flex-col  gap-3 md:2/3 lg:w-1/2 mx-auto">
-        <p>{t("common:contact_p1")}</p>
         <p>m.mohammed@outlook.fr</p>
         <p>0658372366</p>
+        <p>{t("common:contact_p1")}</p>
       </div>
       <form className="container flex flex-col  gap-3 md:2/3 lg:w-1/2 mx-auto pt-10 text-contactDark" onSubmit={sendMessage}>
         <div className="flex items-center gap-2">
-          {/* <div className="text-white">
-            <AiOutlineUser size={40} />
-          </div> */}
           <input
             type="text"
             placeholder={t("common:contact_name")}
@@ -79,10 +74,6 @@ const Contact = () => {
         </div>
 
         <div className="flex items-center gap-2">
-          {/* <div className="text-white">
-            <AiOutlineMail size={40} />
-          </div> */}
-
           <input
             type="email"
             placeholder={t("common:contact_email")}
@@ -95,9 +86,6 @@ const Contact = () => {
         </div>
 
         <div className="flex items-start gap-2">
-          {/* <div className="text-white">
-            <HiOutlinePencil size={40} />
-          </div> */}
           <textarea
             name=""
             id=""
@@ -114,9 +102,6 @@ const Contact = () => {
 
         {notifications && <p className="text-red-600 text-2xl">{notifications}</p>}
         <div className="flex items-center gap-2">
-          {/* <div className="text-white">
-            <FiSend size={40} />
-          </div> */}
           <input
             type="submit"
             value={t("common:contact_btn")}

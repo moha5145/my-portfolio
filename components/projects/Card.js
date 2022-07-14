@@ -1,31 +1,24 @@
-import Image from "next/image";
 import Link from "next/link";
-import ProjectImg from "../../public/assets/skills/css.png";
-import ReactLogo from "../../public/assets/skills/react.png";
-import MongoLogo from "../../public/assets/skills/mongo.png";
-import ExpressLogo from "../../public/assets/skills/express.png";
-import SassLogo from "../../public/assets/skills/sass.png";
-import NodeLogo from "../../public/assets/skills/node.png";
 
-const Card = ({ project }) => {
+const Card = ({ project, isVideo, isPlayerIsVisible, setisPlayerIsVisible }) => {
   const technos = project.technos;
 
   return (
-    <div className=" relative group">
+    <div className=" relative group place-self-start">
       <div
-        className="flex flex-col justify-between  gap-10
-                w-[98%] h-max 
+        className="flex flex-col  gap-10
+                w-[98%] h-max lg:h-[450px]
                 md:p10 bg-project2 rounded-lg 
                 drop-shadow-md hover:h-auto  "
       >
-        <div>
-          <div className="w-66 h-66">
-            <img src={project.img} alt="" className=" rounded-t-md" />
+        <div className="relative">
+          <div className="w-full h-auto h-max lg:h-[450px]">
+            <img src={project.img} alt="" className=" rounded-t-md w-full h-[100%] object-cover object-left-top" />
           </div>
-          <div className="flex gap-2 px-1 py-2 justify-around bg-slate-500 ">
+          <div className="flex w-full justify-around px-1 z-10 bg-slate-500 absolute bottom-0 ">
             {technos &&
               technos.map((techno, index) => {
-                return <img src={techno.link} alt="/" width={25} height={25} key={index} />;
+                return <img src={techno.link} alt="/" width={25} height={25} key={index} className="py-2" />;
               })}
           </div>
         </div>
@@ -38,29 +31,44 @@ const Card = ({ project }) => {
       >
         <h3 className=" ">{project.title}</h3>
         <p>{project.description} </p>
-        <div className="flex justify-between ">
-          <Link href={project.github}>
-            <a
-              target="_blank"
-              className="hover:opacity-80 border-2  rounded-md opacity-100 
+        {!isVideo ? (
+          <div className="flex justify-between ">
+            <Link href={project.github}>
+              <a
+                target="_blank"
+                className="hover:opacity-80 border-2  rounded-md opacity-100 
                         font-bold md:text-xl p-2 md:px-10 bg-white text-black 
                       hover:text-white hover:bg-slate-500"
-            >
-              Github
-            </a>
-          </Link>
+              >
+                Github
+              </a>
+            </Link>
 
-          <Link href={project.link}>
-            <a
-              target="_blank"
+            <Link href={project.link}>
+              <a
+                target="_blank"
+                className="hover:opacity-80 border-2 rounded-md 
+                        opacity-100 font-bold md:text-xl p-2 md:px-10 
+                      text-white hover:bg-white hover:text-black"
+              >
+                Live Demo
+              </a>
+            </Link>
+          </div>
+        ) : (
+          <div className="text-center">
+            <button
+              onClick={() => {
+                setisPlayerIsVisible(true);
+              }}
               className="hover:opacity-80 border-2 rounded-md 
                         opacity-100 font-bold md:text-xl p-2 md:px-10 
                       text-white hover:bg-white hover:text-black"
             >
-              Live Demo
-            </a>
-          </Link>
-        </div>
+              Play
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

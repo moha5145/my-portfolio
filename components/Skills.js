@@ -15,7 +15,7 @@ import { useTranslation } from "next-i18next";
 const Skils = () => {
   const { t } = useTranslation();
   return (
-    <section id="skills" className=" bg-skills h-[100%] md:h-screen w-full text-center p-2 md:py-20 text-slate-400  ">
+    <section id="skills" className=" bg-skills h-full w-full text-center p-2 md:py-20 text-slate-400  ">
       <div className="container mx-auto flex flex-col md:gap-28 gap-5  ">
         <h2 className="ml-10">{t("common:skills")}</h2>
         <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-16 ml-10 md:pt-18  items-center mt-auto ">
