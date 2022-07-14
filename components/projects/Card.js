@@ -4,7 +4,7 @@ const Card = ({ project, isVideo, isPlayerIsVisible, setisPlayerIsVisible }) => 
   const technos = project.technos;
 
   return (
-    <div className=" relative group place-self-start">
+    <div className=" relative group">
       <div
         className="flex flex-col  gap-10
                 w-[98%] h-max lg:h-[450px]
@@ -12,7 +12,7 @@ const Card = ({ project, isVideo, isPlayerIsVisible, setisPlayerIsVisible }) => 
                 drop-shadow-md hover:h-auto  "
       >
         <div className="relative">
-          <div className="w-full h-auto h-max lg:h-[450px]">
+          <div className="w-full h-auto lg:h-[450px]">
             <img src={project.img} alt="" className=" rounded-t-md w-full h-[100%] object-cover object-left-top" />
           </div>
           <div className="flex w-full justify-around px-1 z-10 bg-slate-500 absolute bottom-0 ">

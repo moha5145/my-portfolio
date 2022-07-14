@@ -11,7 +11,7 @@ const Projects = () => {
   const { t } = useTranslation();
   const fripsVideo = "https://vimeo.com/729923268";
   const [isPlayerIsVisible, setisPlayerIsVisible] = useState(false);
-  const [isVideo, setisVideo] = useState(false);
+  // const [isVideo, setisVideo] = useState(false);
 
   return (
     <section id="projects" className="  h-[100%] ">
@@ -36,8 +36,6 @@ const Projects = () => {
             </div>
           ) : (
             <div className="flex flex-col justify-start w-full md:h-[750px] mb-16">
-              {/* <h2 className="mb-5">{t("common:projects_t4")}</h2> */}
-              {/* <Vimeo video="729923268" autoplay /> */}
               <ReactPlayer
                 url={fripsVideo}
                 playing
