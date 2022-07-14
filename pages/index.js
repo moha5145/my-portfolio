@@ -92,9 +92,6 @@ export default function Home({ locale }) {
       </Head>
       <Navbar />
       <div className="pl-10 md:pl-28 text-slate-200 scroll-smooth">
-        {/* <h1>{t("common:title")}</h1>
-        <h1>{locale}</h1> */}
-
         <Main />
 
         <Projects />

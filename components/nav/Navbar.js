@@ -82,7 +82,7 @@ const Navbar = () => {
       </ul>
 
       <div className="px-2 border-t-[0.5px] hover:opacity-50 pt-5 cursor-pointer">
-        <a href="/files/cv.pdf" download target="_blank" rel="noopener noreferrer" className="w-full flex items-center gap-2">
+        <a href="/files/cv-Mohamed-MUSTAFA.pdf" download target="_blank" rel="noopener noreferrer" className="w-full flex items-center gap-2">
           <span className="text-white">
             <HiOutlineDocumentDownload size={20} />
           </span>

@@ -7,13 +7,13 @@ const Card = ({ project, isVideo, isPlayerIsVisible, setisPlayerIsVisible }) => 
     <div className=" relative group">
       <div
         className="flex flex-col  gap-10
-                w-[98%] h-max lg:h-[450px]
+                w-[98%] h-60 sm:h-96 lg:h-[450px]
                 md:p10 bg-project2 rounded-lg 
                 drop-shadow-md hover:h-auto  "
       >
         <div className="relative">
-          <div className="w-full h-auto lg:h-[450px]">
-            <img src={project.img} alt="" className=" rounded-t-md w-full h-[100%] object-cover object-left-top" />
+          <div className="w-full h-60 sm:h-96 md:96 lg:h-[450px]">
+            <img src={project.img} alt="" className=" rounded-t-md w-full h-[100%] object-cover object-left-top " />
           </div>
           <div className="flex w-full justify-around px-1 z-10 bg-slate-500 absolute bottom-0 ">
             {technos &&

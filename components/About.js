@@ -22,7 +22,7 @@ const About = () => {
       </div>
 
       <div className=" hover:opacity-70  cursor-pointer flex justify-center py-10 md:py-32">
-        <a href="/files/cv.pdf" download target="_blank" rel="noopener noreferrer" className=" flex items-center gap-2">
+        <a href="/files/cv-Mohamed-MUSTAFA.pdf" download target="_blank" rel="noopener noreferrer" className=" flex items-center gap-2">
           <span className="text-white">
             <HiOutlineDocumentDownload size={70} />
           </span>

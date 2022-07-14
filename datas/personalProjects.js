@@ -22,7 +22,7 @@ const personalProjects = [
     title: "Recipe app",
     description: "Cross platform Recipe app (web, mobile, Desktop) with local database, made with Vue 3, Quasar, Capacitor, Tauri, Localbase",
     github: "https://github.com/moha5145/myRecipe",
-    img: "https://res.cloudinary.com/dyjpgdpzk/image/upload/v1657730752/my-recipe/Capture_d_%C3%A9cran_du_2022-07-13_18-44-27_tda6dz.png",
+    img: "https://res.cloudinary.com/dyjpgdpzk/image/upload/v1657799390/my-recipe/Capture_d_%C3%A9cran_du_2022-07-14_13-48-12_cnwvnj.png",
     link: "https://my-recipe-vue3.netlify.app/#/",
 
     technos: [
