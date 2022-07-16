@@ -7,11 +7,6 @@ html {
 }
 
 @layer base {
-  body {
-    @apply scroll-smooth
-    /* @apply bg-orange-300 text-white; */;
-  }
-
   h1,
   h2,
   h3,
