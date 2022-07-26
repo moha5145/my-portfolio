@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 
-import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
@@ -22,8 +21,6 @@ export async function getStaticProps({ locale }) {
 }
 
 export default function Home({ locale }) {
-  const router = useRouter();
-
   const addNavClass = (color) => {
     const body = document.querySelector(".body");
     const nav = document.querySelector(".nav");
@@ -40,53 +37,68 @@ export default function Home({ locale }) {
     nav.classList.remove(color);
   };
 
+  const addLinkClass = (index, color) => {
+    const links = document.querySelectorAll(".link");
+    links[index].classList.add(color);
+  };
+
+  const removeLinkClass = (index, color) => {
+    const links = document.querySelectorAll(".link");
+    links[index].classList.remove(color);
+  };
+
   useEffect(() => {
     const sections = document.querySelectorAll("section");
     const links = document.querySelectorAll(".link");
 
     window.onscroll = () => {
-      if (sections[0].getBoundingClientRect().top <= 0 && sections[0].getBoundingClientRect().bottom > 0) {
-        links[0].classList.add("bg-main");
+      for (let i = 0; i < sections.length; i++) {
+        const conditions = sections[i].getBoundingClientRect().top <= 0 && sections[i].getBoundingClientRect().bottom > 0;
+        if (sections[0].getBoundingClientRect().top <= 0 && sections[0].getBoundingClientRect().bottom > 0 && sections[0]) {
+          addLinkClass(0, "bg-main");
+          addNavClass("bg-mainDark");
+        } else {
+          removeLinkClass(0, "bg-main");
+          removeNavClass("bg-mainDark");
+        }
 
-        addNavClass("bg-mainDark");
-      } else {
-        links[0].classList.remove("bg-main");
-        removeNavClass("bg-mainDark");
-      }
+        if (sections[1].getBoundingClientRect().top <= 0 && sections[1].getBoundingClientRect().bottom > 0 && sections[1]) {
+          addLinkClass(1, "bg-projects");
+          addNavClass("bg-projectsDark");
+        } else {
+          removeLinkClass(1, "bg-projects");
+          removeNavClass("bg-projectsDark");
+        }
+        if (sections[2].getBoundingClientRect().top <= 0 && sections[2].getBoundingClientRect().bottom > 0 && sections[1] && sections[2]) {
+          addLinkClass(2, "bg-skills");
+          addNavClass("bg-skillsDark");
+        } else {
+          removeLinkClass(2, "bg-skills");
+          removeNavClass("bg-skillsDark");
+        }
+        if (sections[3].getBoundingClientRect().top <= 0 && sections[3].getBoundingClientRect().bottom > 0 && sections[1] && sections[3]) {
+          addLinkClass(3, "bg-about");
+          addNavClass("bg-aboutDark");
+        } else {
+          removeLinkClass(3, "bg-about");
+          removeNavClass("bg-aboutDark");
+        }
 
-      if (sections[1].getBoundingClientRect().top <= 0 && sections[1].getBoundingClientRect().bottom > 1) {
-        links[1].classList.add("bg-projects");
-        addNavClass("bg-projectsDark");
-      } else {
-        links[1].classList.remove("bg-projects");
-        removeNavClass("bg-projectsDark");
-      }
-
-      if (sections[2].getBoundingClientRect().top <= 1 && sections[2].getBoundingClientRect().bottom > 1) {
-        links[2].classList.add("bg-skills");
-        addNavClass("bg-skillsDark");
-      } else {
-        links[2].classList.remove("bg-skills");
-        removeNavClass("bg-skillsDark");
-      }
-
-      if (sections[3].getBoundingClientRect().top <= 1 && sections[3].getBoundingClientRect().bottom > 1) {
-        links[3].classList.add("bg-about");
-        addNavClass("bg-aboutDark");
-      } else {
-        links[3].classList.remove("bg-about");
-        removeNavClass("bg-aboutDark");
-      }
-
-      if (sections[4].getBoundingClientRect().top <= 2) {
-        links[4].classList.add("bg-contact");
-        addNavClass("bg-contactDark");
-      } else {
-        links[4].classList.remove("bg-contact");
-        removeNavClass("bg-contactDark");
+        if (sections[4].getBoundingClientRect().top <= 0 && sections[4].getBoundingClientRect().bottom > 0 && sections[1] && sections[4]) {
+          addLinkClass(4, "bg-contact");
+          addNavClass("bg-contactDark");
+        } else {
+          removeLinkClass(4, "bg-contact");
+          removeNavClass("bg-contactDark");
+        }
       }
     };
   }, []);
+
+  const handleScroll = (event) => {
+    console.log("scrollTop: ", window.scrollY);
+    console.log("offsetHeight: ", event.currentTarget.offsetHeight);
+  };
 
   return (
     <div>
@@ -97,7 +109,12 @@ export default function Home({ locale }) {
       </Head>
 
       <Navbar />
-      <div className="pl-10 md:pl-28 text-slate-200 scroll-smoot body bg-mainDark">
+      <div
+        className="pl-10 md:pl-28 text-slate-200 scroll-smoot body bg-mainDark"
+        onScroll={(event) => {
+          handleScroll(event);
+        }}
+      >
         <Main />
 
         <Projects />

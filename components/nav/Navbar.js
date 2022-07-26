@@ -4,8 +4,7 @@ import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import { useState } from "react";
 
-import { AiOutlineHome, AiOutlineMail } from "react-icons/ai";
-import { FcAbout } from "react-icons/fc";
+import { AiOutlineHome, AiOutlineMail, AiOutlineInfoCircle } from "react-icons/ai";
 import { GiSkills } from "react-icons/gi";
 import { VscProject } from "react-icons/vsc";
 import { HiOutlineDocumentDownload, HiOutlineTranslate } from "react-icons/hi";
@@ -70,7 +69,7 @@ const Navbar = () => {
 
         <NavbarLink path="/#skills" name={t("common:skills")} border={true} icon={<GiSkills size={20} color="white" />} />
 
-        <NavbarLink path="/#about" name={t("common:about")} border={true} icon={<FcAbout size={20} />} />
+        <NavbarLink path="/#about" name={t("common:about")} border={true} icon={<AiOutlineInfoCircle size={20} />} />
 
         <NavbarLink path="/#contact" name={t("common:contact")} border={false} icon={<AiOutlineMail size={20} />} />
 

@@ -25,8 +25,8 @@ const Card = ({ project, isVideo, setisPlayerIsVisible }) => {
       </div>
 
       <div
-        className=" group-hover:visible invisible  absolute top-0 
-                    left-0 h-full w-[98%] rounded-md px-2 pb-2 md:px-10 flex flex-col justify-around
+        className=" group-hover:visible invisible  absolute top-0
+                    left-0 h-[120%] w-[98%] rounded-md px-2 pb-2 md:px-10 flex flex-col justify-around
                   bg-slate-500 opacity-95"
       >
         <h3 className=" ">{project.title}</h3>
