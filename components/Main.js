@@ -13,7 +13,7 @@ const Main = () => {
     <section id="main" className=" bg-main px-1 w-full h-screen text-center">
       <div className="container mx-auto h-full flex flex-col justify-center items-center md:gap-5 ">
         <div className="flex rounded-full border-double border-4">
-          <Image src={myImage} width="150%" height="150%" className=" rounded-full" objectFit="cover" alt="" />
+          <Image src={myImage} width="160%" height="160%" className=" rounded-full" objectFit="cover" alt="" />
         </div>
         <h1 className="py-2">{t("common:main_t1")}</h1>
         <h2 className="py-2 ">{t("common:main_t2")} </h2>
