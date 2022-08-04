@@ -53,7 +53,6 @@ export default function Home({ locale }) {
 
     window.onscroll = () => {
       for (let i = 0; i < sections.length; i++) {
-        const conditions = sections[i].getBoundingClientRect().top <= 0 && sections[i].getBoundingClientRect().bottom > 0;
         if (sections[0].getBoundingClientRect().top <= 0 && sections[0].getBoundingClientRect().bottom > 0 && sections[0]) {
           addLinkClass(0, "bg-main");
           addNavClass("bg-mainDark");
@@ -95,11 +94,6 @@ export default function Home({ locale }) {
     };
   }, []);
 
-  const handleScroll = (event) => {
-    console.log("scrollTop: ", window.scrollY);
-    console.log("offsetHeight: ", event.currentTarget.offsetHeight);
-  };
-
   return (
     <div>
       <Head>
@@ -109,12 +103,7 @@ export default function Home({ locale }) {
       </Head>
 
       <Navbar />
-      <div
-        className="pl-10 md:pl-28 text-slate-200 scroll-smoot body bg-mainDark"
-        onScroll={(event) => {
-          handleScroll(event);
-        }}
-      >
+      <div className="pl-10 md:pl-28 text-slate-200 scroll-smoot body bg-mainDark">
         <Main />
 
         <Projects />
