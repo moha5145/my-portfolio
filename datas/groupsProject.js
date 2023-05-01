@@ -12,7 +12,7 @@ const groupsProjects = [
       { link: "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/q4q8emquy5eivdz4quk7" },
       { link: "https://res.cloudinary.com/dyjpgdpzk/image/upload/v1656887089/techno/node_duqoyr.png" },
       { link: "https://res.cloudinary.com/dyjpgdpzk/image/upload/v1656887063/techno/mongo_nml7us.png" },
-      { link: "https://aws1.discourse-cdn.com/business20/uploads/forest/original/2X/5/5082a340a4f666fee76b8f818dbbc230ceb92153.png" },
+      { link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLjuux9pfLuxlHsjBHziHJhAG4wHlG-mFqJqF_Mn_wTyI4At4erTI1hISCbCbAO5U53bc&usqp=CAU" },
     ],
   },
 ];

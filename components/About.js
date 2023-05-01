@@ -6,7 +6,7 @@ import { useTranslation } from "next-i18next";
 const About = () => {
   const { t } = useTranslation();
   return (
-    <section id="about" className=" bg-about    ">
+    <section id="about" className=" bg-about md:py-20 ">
       <div className="h-[100%] md:h-screen mx-auto container flex flex-col items-center justify-around lg:px-20 ">
         <h1 className="py-5">{t("common:about_t")}</h1>
         <div className="flex flex-col-reverse lg:flex-row px-3 mx-auto gap-10 items-center">
