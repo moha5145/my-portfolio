@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const setCookie = (lang) => {
     document.cookie = `NEXT_LOCALE=${lang}`;
-    window.location.relaod();
+    window.location.reload();
   };
 
   return (

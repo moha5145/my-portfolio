@@ -11,11 +11,11 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [notifications, setNotifications] = useState("");
 
-  const sendMessage = (event) => {
+  const sendMessage = async (event) => {
     event.preventDefault();
     setNotifications("");
 
-    const expressionReguliere = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     try {
       const messageToSend = {
@@ -27,11 +27,11 @@ const Contact = () => {
         setNotifications("Tous les champs sont obligatoires");
         toast.error("Tous les champs sont obligatoires");
       } else {
-        if (!expressionReguliere.test(email)) {
+        if (!emailRegex.test(email)) {
           setNotifications("Votre email n'est pas valide");
           toast.error("Votre email n'est pas valide");
         } else {
-          const response = axios.post("https://email-form-tripadvisor.herokuapp.com/portfolio/contact/form", messageToSend);
+          const response = await axios.post("https://email-form-tripadvisor.herokuapp.com/portfolio/contact/form", messageToSend);
           setName("");
           setEmail("");
           setMessage("");
@@ -50,7 +50,7 @@ const Contact = () => {
     <section id="contact" className="bg-contact h-screen w-full text-center p-2 flex flex-col  justify-center ">
       <h2 className="mb-5">{t("common:contact_title")}</h2>
 
-      <div className="container flex flex-col  gap-3 md:2/3 lg:w-1/2 mx-auto">
+      <div className="container flex flex-col gap-3 md:2/3 lg:w-1/2 mx-auto">
         <p>m.mohammed@outlook.fr</p>
         <p>0658372366</p>
         <p>{t("common:contact_p1")}</p>
@@ -61,9 +61,9 @@ const Contact = () => {
             type="text"
             placeholder={t("common:contact_name")}
             className="p-2 md-p4 flex-1 rounded-md outline-red-400"
+            value={name}
             onChange={(event) => {
               setName(event.target.value);
-              console.log(name);
             }}
           />
         </div>
@@ -73,9 +73,9 @@ const Contact = () => {
             type="email"
             placeholder={t("common:contact_email")}
             className="p-2 md-p4 flex-1 rounded-md outline-red-400"
+            value={email}
             onChange={(event) => {
               setEmail(event.target.value);
-              console.log(email);
             }}
           />
         </div>
@@ -88,9 +88,9 @@ const Contact = () => {
             rows="7"
             placeholder={t("common:contact_message")}
             className="p-2 md-p4 flex-1 rounded-md outline-red-400"
+            value={message}
             onChange={(event) => {
               setMessage(event.target.value);
-              console.log(message);
             }}
           ></textarea>
         </div>

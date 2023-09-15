@@ -61,7 +61,13 @@ const Carousels = ({ projects, isVideo, isPlayerIsVisible, setisPlayerIsVisible 
         >
           {projects.map((project) => {
             return (
-              <Card project={project} key={project.id} isVideo={isVideo} isPlayerIsVisible={isPlayerIsVisible} setisPlayerIsVisible={setisPlayerIsVisible} />
+              <Card
+                project={project}
+                key={project.id}
+                isVideo={isVideo}
+                isPlayerIsVisible={isPlayerIsVisible}
+                setisPlayerIsVisible={setisPlayerIsVisible}
+              />
             );
           })}
         </Carousel>

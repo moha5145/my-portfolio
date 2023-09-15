@@ -13,7 +13,6 @@ const About = () => {
           <div className="lg:flex-3 md:items-center flex flex-col gap-10 text-lg md:text-xl md:w-3/4">
             <p>{t("common:about_p1")}</p>
             <p>{t("common:about_p2")}</p>
-
             <p>{t("common:about_p3")}</p>
           </div>
           <div className="lg:flex-2 w-3/4">
