@@ -31,7 +31,7 @@ const Contact = () => {
           setNotifications("Votre email n'est pas valide");
           toast.error("Votre email n'est pas valide");
         } else {
-          const response = await axios.post("https://email-form-tripadvisor.herokuapp.com/portfolio/contact/form", messageToSend);
+          const response = await axios.post("https://emailform-2k813eta.b4a.run/portfolio/contact/form", messageToSend);
           setName("");
           setEmail("");
           setMessage("");
