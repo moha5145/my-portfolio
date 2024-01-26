@@ -3,9 +3,9 @@ const cloneProjects = [
     id: "1",
     title: "Tell-me-more",
     description: "",
-    github: "https://github.com/moha5145/tell-me-more-front",
+    github: "https://github.com/moha5145/tell-me-more-2",
     img: "https://res.cloudinary.com/dyjpgdpzk/image/upload/v1701290298/tell-me-more/form/Capture_d_%C3%A9cran_du_2023-11-29_21-35-54_kn6f9l.png",
-    link: "https://tell-me-more-moha.netlify.app/",
+    link: "https://tell-me-more-2.netlify.app/",
     technos: [
       { link: "https://res.cloudinary.com/dyjpgdpzk/image/upload/v1656886992/techno/html_eguq4q.png" },
       { link: "https://res.cloudinary.com/dyjpgdpzk/image/upload/v1656887225/techno/sass_tnjkmf.png" },
